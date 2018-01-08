@@ -1,0 +1,5 @@
+CREATE TABLE MacAutos {
+    id int NOT NULL AUTO_INCREMENT,
+    brand VARCHAR(255),
+    PRIMARY KEY(id)
+}

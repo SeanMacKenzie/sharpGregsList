@@ -23,18 +23,18 @@ namespace sharpGregsList.Repositories
 
         public IEnumerable<Auto> GetAll()
         {
-           return _db.Query<Auto>($"SELECT * FROM Autos");
+           return _db.Query<Auto>($"SELECT * FROM macautos");
         }
 
         public Auto GetById(int id)
         {
-           return _db.QueryFirstOrDefault<Auto>($"SELECT * FROM Autos WHERE id = @id", id);
+           return _db.QueryFirstOrDefault<Auto>($"SELECT * FROM macautos WHERE id = @id", id);
         }
 
         public Auto Add(Auto auto)
         {
                
-                int id = _db.ExecuteScalar<int>("INSERT INTO Autos (Title, Make, Model, Description, Contact, Img, Price)"
+                int id = _db.ExecuteScalar<int>("INSERT INTO macautos (Title, Make, Model, Description, Contact, Img, Price)"
                  + " VALUES (@Title, @Make, @Model, @Description, @Contact, @Img, @Price) SELECT LAST_INSERT_ID()",  new {
                      auto.Title,
                      auto.Make,
@@ -52,7 +52,7 @@ namespace sharpGregsList.Repositories
          public Auto GetOneByIdAndUpdate(int id, Auto auto)
         {
                 return _db.QueryFirstOrDefault<Auto>($@"
-                UPDATE Autos SET  
+                UPDATE macautos SET  
                     Title = @Title,
                     Make = @Make,
                     Model = @Model,
@@ -61,13 +61,13 @@ namespace sharpGregsList.Repositories
                     Img = @Img,
                     Price = @Price
                 WHERE Id = {id};
-                SELECT * FROM Autos WHERE id = {id};", auto);
+                SELECT * FROM macautos WHERE id = {id};", auto);
             
         }
 
         public string FindByIdAndRemove(int id)
         {
-            var success = _db.Execute(@"DELETE FROM Autos Where ID = @id", id);
+            var success = _db.Execute(@"DELETE FROM macautos Where ID = @id", id);
             return success > 0 ? "success" : "failed";
 
         }

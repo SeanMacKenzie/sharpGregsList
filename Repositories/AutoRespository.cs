@@ -65,7 +65,7 @@ namespace sharpGregsList.Repositories
             
         }
 
-        public void FindByIdAndRemove(int id)
+        public string FindByIdAndRemove(int id)
         {
             var success = _db.Execute(@"DELETE FROM Autos Where ID = @id", id);
             return success > 0 ? "success" : "failed";

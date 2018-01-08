@@ -35,11 +35,11 @@ namespace sharpGregsList.Repositories
         {
                
                 int id = _db.ExecuteScalar<int>("INSERT INTO macautos (Title, Make, Model, Description, Contact, Img, Price)"
-                 + " VALUES (@Title, @Make, @Model, @Description, @Contact, @Img, @Price) SELECT LAST_INSERT_ID()",  new {
+                 + " VALUES (@Title, @Make, @Model, @Descript, @Contact, @Img, @Price) SELECT LAST_INSERT_ID()",  new {
                      auto.Title,
                      auto.Make,
                      auto.Model,
-                     auto.Description,
+                     auto.Descript,
                      auto.Contact,
                      auto.Img,
                      auto.Price
@@ -56,7 +56,7 @@ namespace sharpGregsList.Repositories
                     Title = @Title,
                     Make = @Make,
                     Model = @Model,
-                    Description = @Description,
+                    Descript = @Descript,
                     Contact = @Contact,
                     Img = @Img,
                     Price = @Price

@@ -12775,11 +12775,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\source\\codeworks\\sharpGregsList\\sharpGregsList.csproj",
+      "projectUniqueName": "c:\\source\\codeworks\\sharpGregsList\\sharpGregsList.csproj",
       "projectName": "sharpGregsList",
-      "projectPath": "C:\\source\\codeworks\\sharpGregsList\\sharpGregsList.csproj",
+      "projectPath": "c:\\source\\codeworks\\sharpGregsList\\sharpGregsList.csproj",
       "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-      "outputPath": "C:\\source\\codeworks\\sharpGregsList\\obj\\",
+      "outputPath": "c:\\source\\codeworks\\sharpGregsList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

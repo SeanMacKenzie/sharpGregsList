@@ -7,5 +7,5 @@
 --     img VARCHAR(255),
 --     price DECIMAL(40, 2),
 --     PRIMARY KEY(id)
--- )
+-- );
 

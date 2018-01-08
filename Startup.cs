@@ -21,7 +21,7 @@ namespace sharpGregsList
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            _connectionString = configuration.GetSection("DB").GetValue<string>("mySQLConnectionString");
+            _connectionString = configuration.GetSection("DB").GetValue<string>("MySQLConnectionString");
         }
 
 
@@ -31,6 +31,8 @@ namespace sharpGregsList
             services.AddMvc();
             services.AddTransient<IDbConnection>(x => CreateDBContext());
             services.AddTransient<AutoRepository>();
+            services.AddTransient<PropertyRepository>();
+            services.AddTransient<AnimalRepository>();
 
         }
 

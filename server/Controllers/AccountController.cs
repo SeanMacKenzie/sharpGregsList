@@ -94,6 +94,8 @@ namespace sharpGregsList.Controllers
             return "How did you even get here?";
         }
 
+        //logout
+        //ExitWindows(0, 0);
 
 
     }

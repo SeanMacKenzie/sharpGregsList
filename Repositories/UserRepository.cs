@@ -105,7 +105,7 @@ namespace sharpGregsList.Repositories
                 ", user);
                 return "Good Job";
             }
-            return "Umm nope!";
+            return "Unsuccessful";
         }
     }
 }

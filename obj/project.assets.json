@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "BCrypt.Net-Core/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Runtime.Extensions": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/BCrypt.Net-Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/BCrypt.Net-Core.dll": {}
+        }
+      },
       "Dapper/1.50.4": {
         "type": "package",
         "dependencies": {
@@ -4840,6 +4853,20 @@
     }
   },
   "libraries": {
+    "BCrypt.Net-Core/1.4.0": {
+      "sha512": "61fIfobQh+o1vsoLTY6abM2UnyFLGAXJSqLYAwlNMfC3445kDD57AqLrJIAOFcHsgn+T3i8tbCP0ugK5btA6Uw==",
+      "type": "package",
+      "path": "bcrypt.net-core/1.4.0",
+      "files": [
+        "bcrypt.net-core.1.4.0.nupkg.sha512",
+        "bcrypt.net-core.nuspec",
+        "lib/net40/BCrypt.Net-Core.dll",
+        "lib/net45/BCrypt.Net-Core.dll",
+        "lib/net451/BCrypt.Net-Core.dll",
+        "lib/net452/BCrypt.Net-Core.dll",
+        "lib/netstandard1.3/BCrypt.Net-Core.dll"
+      ]
+    },
     "Dapper/1.50.4": {
       "sha512": "t5DMz+1aEkBcyCgkj+6hJHNsUq3k/d67lVMTNzICEhVjPUI3Gt2kgotSK8S4SpziIbFPphnOEn8M6Q75ED5hRQ==",
       "type": "package",
@@ -12765,27 +12792,28 @@
       "Microsoft.NETCore.App >= 2.0.0",
       "MySqlConnector >= 0.34.0",
       "System.Data.SqlClient >= 4.4.0",
+      "bcrypt.net-core >= 1.4.0",
       "dapper >= 1.50.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Leslie McFarlane\\.nuget\\packages\\": {},
+    "C:\\Users\\Owner\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\source\\homework\\sharpGregsList\\sharpGregsList.csproj",
+      "projectUniqueName": "c:\\source\\codeworks\\sharpGregsList\\sharpGregsList.csproj",
       "projectName": "sharpGregsList",
-      "projectPath": "c:\\source\\homework\\sharpGregsList\\sharpGregsList.csproj",
-      "packagesPath": "C:\\Users\\Leslie McFarlane\\.nuget\\packages\\",
-      "outputPath": "c:\\source\\homework\\sharpGregsList\\obj\\",
+      "projectPath": "c:\\source\\codeworks\\sharpGregsList\\sharpGregsList.csproj",
+      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+      "outputPath": "c:\\source\\codeworks\\sharpGregsList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Leslie McFarlane\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -12823,6 +12851,10 @@
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.4.0, )"
+          },
+          "bcrypt.net-core": {
+            "target": "Package",
+            "version": "[1.4.0, )"
           },
           "dapper": {
             "target": "Package",

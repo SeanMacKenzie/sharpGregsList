@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace sharpGregsList.HelperModels
+namespace sharpGregsList.Models
 
 {
     public class ChangeUserPasswordModel

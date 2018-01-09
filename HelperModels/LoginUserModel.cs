@@ -1,4 +1,4 @@
-namespace sharpGregsList.HelperModels
+namespace sharpGregsList.Models
 {
     public class LoginUserModel
     {

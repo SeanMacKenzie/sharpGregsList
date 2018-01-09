@@ -13,7 +13,7 @@ var server = axios.create({
 
 server.get('account/authenticate').then(x => console.log(x))
 
-server.get('api/values').then(res => {
+server.get('api/autos').then(res => {
   console.log(res)
 }).catch(err => console.log(err))
 

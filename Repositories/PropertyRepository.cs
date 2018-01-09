@@ -28,7 +28,7 @@ namespace sharpGregsList.Repositories
 
         public Property GetById(int id)
         {
-           return _db.QueryFirstOrDefault<Property>($"SELECT * FROM macproperties WHERE id = @id", id);
+           return _db.QueryFirstOrDefault<Property>($"SELECT * FROM macproperties WHERE id = {id}");
         }
 
         public Property Add(Property property)
@@ -67,7 +67,7 @@ namespace sharpGregsList.Repositories
 
         public string FindByIdAndRemove(int id)
         {
-            var success = _db.Execute(@"DELETE FROM macproperties Where ID = @id", id);
+            var success = _db.Execute($"DELETE FROM macproperties Where id = {id}");
             return success > 0 ? "success" : "failed";
 
         }

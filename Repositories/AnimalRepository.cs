@@ -28,7 +28,7 @@ namespace sharpGregsList.Repositories
 
         public Animal GetById(int id)
         {
-            return _db.QueryFirstOrDefault<Animal>($"SELECT * FROM macanimals WHERE id = @id", id);
+            return _db.QueryFirstOrDefault<Animal>($"SELECT * FROM macanimals WHERE id = {id}");
         }
 
         public Animal Add(Animal animal)
@@ -68,7 +68,7 @@ namespace sharpGregsList.Repositories
 
         public string FindByIdAndRemove(int id)
         {
-            var success = _db.Execute(@"DELETE FROM macanimals Where ID = @id", id);
+            var success = _db.Execute($@"DELETE FROM macanimals WHERE id = {id}");
             return success > 0 ? "success" : "failed";
 
         }

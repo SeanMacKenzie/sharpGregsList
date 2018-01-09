@@ -9,4 +9,4 @@
 --     PRIMARY KEY(id)
 -- );
 
-SELECT * FROM macautos
+SELECT * FROM macanimals WHERE id = 2

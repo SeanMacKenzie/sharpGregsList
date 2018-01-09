@@ -28,7 +28,7 @@ namespace sharpGregsList.Repositories
 
         public Auto GetById(int id)
         {
-            return _db.QueryFirstOrDefault<Auto>($"SELECT * FROM macautos WHERE id = @id", id);
+            return _db.QueryFirstOrDefault<Auto>($"SELECT * FROM macautos WHERE id = {id}");
         }
 
         public Auto Add(Auto auto)
@@ -68,7 +68,7 @@ namespace sharpGregsList.Repositories
 
         public string FindByIdAndRemove(int id)
         {
-            var success = _db.Execute(@"DELETE FROM macautos Where ID = @id", id);
+            var success = _db.Execute($"DELETE FROM macautos Where ID = {id}");
             return success > 0 ? "success" : "failed";
 
         }

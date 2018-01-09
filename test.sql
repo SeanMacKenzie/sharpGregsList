@@ -9,3 +9,4 @@
 --     PRIMARY KEY(id)
 -- );
 
+SELECT * FROM macautos

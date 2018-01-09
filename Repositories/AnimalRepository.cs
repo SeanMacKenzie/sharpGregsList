@@ -34,17 +34,17 @@ namespace sharpGregsList.Repositories
         public Animal Add(Animal animal)
         {
 
-            int id = _db.ExecuteScalar<int>("INSERT INTO macanimals (Title, Type, Descript, Size, Contact, Img, Price)"
-             + " VALUES (@Title, @Type, @Descript, @Contact, @Img, @Price) SELECT LAST_INSERT_ID()", new
-             {
-                 animal.Title,
-                 animal.Type,
-                 animal.Descript,
+            int id = _db.ExecuteScalar<int>("INSERT INTO macanimals (Title, Type,          Descript, Size, Contact, Img, Price)"
+                    + " VALUES (@Title, @Type, @Descript, @Contact, @Img, @Price); SELECT LAST_INSERT_ID()", new
+                    {
+                        animal.Title,
+                        animal.Type,
+                        animal.Descript,
                  
-                 animal.Contact,
-                 animal.Img,
-                 animal.Price
-             });
+                        animal.Contact,
+                        animal.Img,
+                        animal.Price
+                    });
             animal.Id = id;
             return animal;
 

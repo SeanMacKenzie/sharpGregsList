@@ -9,4 +9,3 @@
 --     PRIMARY KEY(id)
 -- );
 
-SELECT * FROM macanimals WHERE id = 2

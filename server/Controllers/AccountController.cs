@@ -56,8 +56,8 @@ namespace sharpGregsList.Controllers
         {
             var user = HttpContext.User;
             var id = user.Identity.Name;
-            // var email = user.Claims.Where(c => c.Type == ClaimTypes.Email)
-            //        .Select(c => c.Value).SingleOrDefault();
+            var email = user.Claims.Where(c => c.Type == ClaimTypes.Email)
+                   .Select(c => c.Value).SingleOrDefault();
             return _db.GetUserById(id);
         }
 

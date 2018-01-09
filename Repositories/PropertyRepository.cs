@@ -34,8 +34,8 @@ namespace sharpGregsList.Repositories
         public Property Add(Property property)
         {
                
-                int id = _db.ExecuteScalar<int>("INSERT INTO macproperties (Title, Type, Descript, Size, Contact, Img, Price)"
-                 + " VALUES (@Title, @Type, @Descript, @Size, @Contact, @Img, @Price); SELECT LAST_INSERT_ID()",  new {
+                int id = _db.ExecuteScalar<int>(@"INSERT INTO macproperties (Title, Type, Descript, Size, Contact, Img, Price)
+                 VALUES (@Title, @Type, @Descript, @Size, @Contact, @Img, @Price); SELECT LAST_INSERT_ID()",  new {
                     property.Title,
                     property.Type,
                     property.Descript,

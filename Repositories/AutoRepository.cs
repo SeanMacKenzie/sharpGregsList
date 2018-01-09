@@ -34,7 +34,7 @@ namespace sharpGregsList.Repositories
         public Auto Add(Auto auto)
         {
 
-            int id = _db.ExecuteScalar<int>(@"INSERT INTO macautos (Title, Make, Model, Description, Contact, Img, Price)
+            int id = _db.ExecuteScalar<int>(@"INSERT INTO macautos (Title, Make, Model, Descript, Contact, Img, Price)
                 VALUES (@Title, @Make, @Model, @Descript, @Contact, @Img, @Price); SELECT LAST_INSERT_ID()", new
             {
                 auto.Title,

@@ -1,0 +1,5 @@
+import router from './router'
+import vue from 'vue'
+import $ from 'jquery'
+import vuex from 'vuex'
+import axios from 'axios'

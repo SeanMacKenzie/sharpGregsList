@@ -4,12 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+import store from './store'
+import vuex from 'vuex'
 
 var server = axios.create({
   baseURL: window.location.host.includes("localhost") ? '//localhost:5000' : '/',
   timeout: 2000,
   withCredentials: true
 })
+
+
 
 server.get('account/authenticate').then(x => console.log(x))
 
